@@ -1,0 +1,303 @@
+{
+  "report": {
+    "run_id": "20261017T131316355636Z-ea8ce0a5",
+    "timestamp_utc": "2026-10-17T18:43:16+05:30",
+    "input_path": "Natural-language prompt (content omitted)",
+    "overall_status": "fail",
+    "lifecycle_status": "completed",
+    "stage": "verification complete",
+    "model_generation_status": "succeeded",
+    "matlab_startup_status": "succeeded",
+    "diagram_update_status": "succeeded",
+    "simulation_status": "succeeded",
+    "model_path": "C:\\Users\\Administrator\\Desktop\\CircuitPilot\\artifacts\\api_runs\\20261017T131316355636Z-ea8ce0a5\\unit_step_pid_control.slx",
+    "sample_count": 57,
+    "simulation_time_range": "0 to 10 s",
+    "verification": {
+      "status": "fail",
+      "checks": {
+        "simulation_success": {
+          "status": "pass",
+          "value": "succeeded",
+          "unit": null,
+          "criterion": null,
+          "reason": "The generator reported successful simulation."
+        },
+        "response_finite": {
+          "status": "pass",
+          "value": 57.0,
+          "unit": "samples",
+          "criterion": null,
+          "reason": "All response samples are finite."
+        },
+        "sample_data": {
+          "status": "pass",
+          "value": 57.0,
+          "unit": "samples",
+          "criterion": null,
+          "reason": "Time and response samples are aligned and strictly increasing."
+        },
+        "final_value_tracking_error": {
+          "status": "pass",
+          "value": 0.0027831308842388713,
+          "unit": "output units",
+          "criterion": "<= 0.01 output units",
+          "reason": "Final-value tracking error is within the specified limit."
+        },
+        "peak_overshoot": {
+          "status": "fail",
+          "value": 6.3849221276928825,
+          "unit": "%",
+          "criterion": "<= 5.0%",
+          "reason": "Peak overshoot exceeds the specified limit."
+        },
+        "settling_time": {
+          "status": "fail",
+          "value": 6.078471332120363,
+          "unit": "s",
+          "criterion": "<= 5.0 s; 2% band",
+          "reason": "Settling time exceeds the specified limit."
+        }
+      },
+      "summary": "One or more required simulation checks failed."
+    },
+    "repair": {
+      "enabled": false
+    },
+    "error": null,
+    "next_step": "Review the failed checks and measured values, then adjust the structured model parameters or simulation settings before rerunning."
+  },
+  "simulation": {
+    "model_path": "C:\\Users\\Administrator\\Desktop\\CircuitPilot\\artifacts\\api_runs\\20261017T131316355636Z-ea8ce0a5\\unit_step_pid_control.slx",
+    "model_opened": true,
+    "diagram_update": "succeeded",
+    "simulation_status": "succeeded",
+    "time": [
+      0,
+      3.1554436208840472E-30,
+      0.00010047545726038319,
+      0.000602852743562299,
+      0.0031147391750718785,
+      0.015674171332619776,
+      0.07847133212035926,
+      0.27847133212035924,
+      0.47847133212035925,
+      0.6784713321203593,
+      0.8784713321203592,
+      1.0784713321203592,
+      1.2784713321203591,
+      1.478471332120359,
+      1.678471332120359,
+      1.878471332120359,
+      2.078471332120359,
+      2.2784713321203593,
+      2.4784713321203595,
+      2.6784713321203597,
+      2.87847133212036,
+      3.07847133212036,
+      3.2784713321203602,
+      3.4784713321203604,
+      3.6784713321203606,
+      3.8784713321203608,
+      4.078471332120361,
+      4.278471332120361,
+      4.478471332120361,
+      4.6784713321203615,
+      4.878471332120362,
+      5.078471332120362,
+      5.278471332120362,
+      5.478471332120362,
+      5.678471332120362,
+      5.8784713321203625,
+      6.078471332120363,
+      6.278471332120363,
+      6.478471332120363,
+      6.678471332120363,
+      6.878471332120363,
+      7.078471332120364,
+      7.278471332120364,
+      7.478471332120364,
+      7.678471332120364,
+      7.878471332120364,
+      8.078471332120364,
+      8.278471332120363,
+      8.478471332120362,
+      8.678471332120361,
+      8.87847133212036,
+      9.07847133212036,
+      9.27847133212036,
+      9.478471332120359,
+      9.678471332120358,
+      9.878471332120357,
+      10
+    ],
+    "output": [
+      0,
+      9.95682444457883E-60,
+      1.009481034586208E-08,
+      3.6332188260777187E-07,
+      9.686491168822957E-06,
+      0.00024375428947346259,
+      0.005916316361372011,
+      0.06683947803976169,
+      0.1754472118989968,
+      0.31109745986263915,
+      0.4565022361907257,
+      0.5981983782303752,
+      0.7265881084526973,
+      0.835662150405306,
+      0.9225128974892628,
+      0.9867327900831706,
+      1.0297765039979492,
+      1.054347236522644,
+      1.0638492212769288,
+      1.0619320038427247,
+      1.0521378619688928,
+      1.0376525169579245,
+      1.0211510621280024,
+      1.004725668178239,
+      0.9898787695934097,
+      0.9775646406022639,
+      0.968263041546739,
+      0.9620704731582432,
+      0.9587970779649829,
+      0.9580600029276504,
+      0.9593667920691303,
+      0.9621848996226867,
+      0.9659955661272419,
+      0.9703320111929681,
+      0.9748031505484169,
+      0.979104865413418,
+      0.983021291043434,
+      0.9864187165420775,
+      0.9892345743056776,
+      0.9914637181467157,
+      0.9931438109760637,
+      0.9943412224878041,
+      0.9951384192669972,
+      0.9956234465813462,
+      0.9958817737685808,
+      0.9959905144752342,
+      0.9960148417082846,
+      0.9960062921860022,
+      0.9960025870179553,
+      0.9960285760135776,
+      0.9960979296152759,
+      0.9962152444369555,
+      0.9963782855222157,
+      0.9965801521111517,
+      0.9968112171148967,
+      0.9970607486917944,
+      0.9972168691157611
+    ],
+    "verification": {
+      "status": "fail",
+      "checks": {
+        "simulation_success": {
+          "status": "pass",
+          "value": "succeeded",
+          "unit": null,
+          "criterion": null,
+          "reason": "The generator reported successful simulation."
+        },
+        "response_finite": {
+          "status": "pass",
+          "value": 57.0,
+          "unit": "samples",
+          "criterion": null,
+          "reason": "All response samples are finite."
+        },
+        "sample_data": {
+          "status": "pass",
+          "value": 57.0,
+          "unit": "samples",
+          "criterion": null,
+          "reason": "Time and response samples are aligned and strictly increasing."
+        },
+        "final_value_tracking_error": {
+          "status": "pass",
+          "value": 0.0027831308842388713,
+          "unit": "output units",
+          "criterion": "<= 0.01 output units",
+          "reason": "Final-value tracking error is within the specified limit."
+        },
+        "peak_overshoot": {
+          "status": "fail",
+          "value": 6.3849221276928825,
+          "unit": "%",
+          "criterion": "<= 5.0%",
+          "reason": "Peak overshoot exceeds the specified limit."
+        },
+        "settling_time": {
+          "status": "fail",
+          "value": 6.078471332120363,
+          "unit": "s",
+          "criterion": "<= 5.0 s; 2% band",
+          "reason": "Settling time exceeds the specified limit."
+        }
+      },
+      "summary": "One or more required simulation checks failed."
+    }
+  },
+  "model": {
+    "name": "unit_step_pid_control",
+    "components": [
+      {
+        "id": "step",
+        "type": "Step"
+      },
+      {
+        "id": "sum",
+        "type": "Sum"
+      },
+      {
+        "id": "pid",
+        "type": "PID Controller"
+      },
+      {
+        "id": "plant",
+        "type": "Transfer Fcn"
+      },
+      {
+        "id": "scope",
+        "type": "Scope"
+      }
+    ],
+    "connections": [
+      {
+        "source": "step",
+        "source_port": 1,
+        "target": "sum",
+        "target_port": 1
+      },
+      {
+        "source": "sum",
+        "source_port": 1,
+        "target": "pid",
+        "target_port": 1
+      },
+      {
+        "source": "pid",
+        "source_port": 1,
+        "target": "plant",
+        "target_port": 1
+      },
+      {
+        "source": "plant",
+        "source_port": 1,
+        "target": "sum",
+        "target_port": 2
+      },
+      {
+        "source": "plant",
+        "source_port": 1,
+        "target": "scope",
+        "target_port": 1
+      }
+    ]
+  },
+  "report_files": {
+    "json": "20261017T131316355636Z-ea8ce0a5/report/verification_report.json",
+    "markdown": "20261017T131316355636Z-ea8ce0a5/report/verification_report.md"
+  }
+}

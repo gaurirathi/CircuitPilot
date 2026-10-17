@@ -1,0 +1,24 @@
+{
+  "name": "ClosedLoopPID",
+  "components": [
+    {"id": "reference", "type": "Step", "parameters": {"Time": 0, "Before": 0, "After": 1}},
+    {"id": "error", "type": "Sum", "parameters": {"Inputs": "+-"}},
+    {"id": "controller", "type": "PID Controller", "parameters": {"P": 2, "I": 1, "D": 0, "N": 100}},
+    {"id": "plant", "type": "Transfer Fcn", "parameters": {"Numerator": [1], "Denominator": [1, 2, 1]}},
+    {"id": "scope", "type": "Scope", "parameters": {}}
+  ],
+  "connections": [
+    {"source": "reference", "target": "error", "target_port": 1},
+    {"source": "error", "target": "controller"},
+    {"source": "controller", "target": "plant"},
+    {"source": "plant", "target": "error", "target_port": 2},
+    {"source": "plant", "target": "scope"}
+  ],
+  "stop_time": 10,
+  "output_component": "plant",
+  "verification": {
+    "max_tracking_error": 0.01,
+    "max_overshoot_percent": 5,
+    "max_settling_time": 5
+  }
+}

@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "circuitpilot"
+version = "0.1.0"
+description = "Deterministic structured-graph generation for classical Simulink control models"
+requires-python = ">=3.10"
+dependencies = ["pydantic>=2.0,<3", "python-dotenv>=1.0"]
+
+[project.optional-dependencies]
+llm = ["openai>=1.66.0", "google-genai>=2.0.0"]
+api = ["fastapi>=0.110", "uvicorn[standard]>=0.27"]
+
+[project.scripts]
+circuitpilot = "circuitpilot.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["circuitpilot", "circuitpilot.*"]
+exclude = ["artifacts*", "tests*", "examples*"]
+namespaces = false
+
+[tool.setuptools.package-data]
+circuitpilot = ["matlab/*.m"]
